@@ -1,0 +1,83 @@
+workflow_designer: |
+    """
+    Objective: Break down the given objective into meta-steps to create an efficient workflow.
+
+    <Objective>
+    {objective}
+    </Objective>
+
+    Available Tools: Custom Python functions:
+    
+    <Functions>
+    {functions}
+    </Functions>
+
+    Instructions:
+    1. Identify Meta-Steps: Break down the objective into high-level meta-steps.
+    2. Assign Agents: Assign the best-suited agent or team member to each meta-step.
+    3. **Map and Create Functions**:
+        - For each meta-step, match it with the necessary Python function(s) from the provided tools.
+        - If a required function isn't available, **create a function name** that appropriately describes the process, ensuring it aligns with the step and objective.
+
+    Guidelines: Clearly define function names that describe what the new function should achieve if one isn't provided. 
+    The function name should reflect its role in the process and adhere to Python naming conventions.
+
+    Note: An agent can only have one type of output, If you need to return different types of outputs, create different agents.
+    """
+
+output_structure_designer: |
+    """
+    <Workflow>
+    {workflow}
+    </Workflow>
+
+    Available Tools: Custom Python functions:
+
+    <Functions>
+    {functions}
+    </Functions>
+
+    Existing Output Structures:
+    
+    <Existing Output Structures>
+    {existing_structures}
+    </Existing Output Structures>
+
+    Instructions:
+    Define missingoutput structures: Describe the data transfer between agents for each meta-step in workflow (output).
+    
+    Note:
+
+    Make sure the output includes a comprehensive structure, specifying the keys and types for each nested dictionary. 
+    If the data type is not a simple type, do not end as an end node.
+    """
+
+missing_function_identifier: |
+    """
+    <Workflow>
+    {workflow}
+    </Workflow>
+
+    Available Tools: Custom Python functions:
+
+    <Functions>
+    {functions}
+    </Functions>
+
+    Instructions:
+    1. Identify Missing Functions: Review the workflow and compare it with the available Python functions.
+    2. Only list functions that are used in the workflow but are not present in the provided tools. Do not list functions that are already defined.
+    3. If no functions are missing, return an empty list.
+    """
+
+supervisor_prompt_designer: |
+    """
+    <Workflow>
+    {workflow}
+    </Workflow>
+
+    Instructions:
+    Describe the order in which each agent is invoked in workflow as prompt
+
+    Note: labeling the beginning and end of the loop or the condition when more than one branches exist, if necessary. 
+    """

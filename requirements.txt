@@ -1,0 +1,14 @@
+langchain==0.2.16
+langgraph==0.2.19
+langsmith==0.1.117
+langchain-core==0.2.38
+langchain-openai==0.1.23
+langchain_community==0.2.16
+
+jupyter==1.0.0
+pydantic==2.9.0
+python-dotenv==1.0.1
+pymongo==4.8.0
+ipykernel==6.25.0
+
+
