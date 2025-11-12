@@ -1,3 +1,7 @@
+# Description
+> This is a prototype of Agentic Workflow architecture, trying to test if the architecture work well.
+
+
 # Running the Application Locally
 
 This guide will help you set up and run the application on your local machine. Use the Jupyter Notebook to Run the project.
