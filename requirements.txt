@@ -1,6 +1,6 @@
 langchain==0.2.16
 langgraph==0.2.19
-langsmith==0.1.117
+langsmith==0.8.18
 langchain-core==0.2.38
 langchain-openai==0.1.23
 langchain_community==0.2.16
